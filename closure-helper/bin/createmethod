@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+var argv = require('optimist')
+  .usage('Gets Google Closure Like jsDocs and method names.\nUsage: $0')
+  .demand('f')
+  .alias('f', 'file')
+  .describe('f', 'Load a file')
+  .demand('c')
+  .alias('c', 'command')
+  .describe('c', 'Command for analyze')
+  .argv;
+
+var util = require("util");
+var env = process.env;
+var FileInfo = require("../fileinfo/fileinfo.js");
+var CreateMethod = require("../createmethod/createmethod.js");
+
+var fileInfo = new FileInfo(argv.f);
+try{
+  var method = new CreateMethod(fileInfo.ns, argv.c);
+  // util.puts(fileInfo.ns);
+  util.puts(method.create());
+} catch(e) {
+  util.puts(e);
+}
+
