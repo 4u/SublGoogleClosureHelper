@@ -393,7 +393,7 @@ CreateMethod.prototype._createJsDoc = function(jsDoc) {
 CreateMethod.prototype._createFunc = function() {
   var jsDoc = [];
 
-  if (this.instr.params) {
+  if (!this.instr.isInherit && !this.instr.isOverride && this.instr.params) {
     this.instr.params.forEach(function(param) {
       jsDoc.push('@param {' + param.type.expression + '} ' + param.name);
     });
