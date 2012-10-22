@@ -38,7 +38,7 @@ protected getElementById(string id) : Element
 `
 
 Returns:
-`
+<pre><code>
 /**
  * @param {string} id
  * @protected
@@ -47,7 +47,7 @@ Returns:
 example.MyClass.prototype.getElementById = function(id) {
   
 };
-`
+</code></pre>
 For constructors [methodName] have to be full (with namespace). Return is inerpretated as extends
 
 
@@ -64,13 +64,13 @@ private number _id = 0
 `
 
 Returns:
-`
+<pre><code>
 /**
  * @type {number}
  * @private
  */
 example.MyClass.Funnel.prototype._id = 0;
-`
+</code></pre>
 
 Keywords
 --------
