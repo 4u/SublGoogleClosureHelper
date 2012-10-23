@@ -61,8 +61,7 @@ private number _id = 0
 </code></pre>
 
 Returns:
-<pre><code>
-/**
+<pre><code>/**
  * @type {number}
  * @private
  */
