@@ -31,15 +31,13 @@ Function
 `[type] [methodName]([paramType1] [paramName1], [paramType2] [paramName2]) : [return]`
 
 For example:
-`
-goog.provide('example.MyClass');
+<pre><code>goog.provide('example.MyClass');
 ...
 protected getElementById(string id) : Element
-`
+</code></pre>
 
 Returns:
-<pre><code>
-/**
+<pre><code>/**
  * @param {string} id
  * @protected
  * @return {Element}
@@ -57,11 +55,10 @@ Property
 `[type] [properyType] [propertyName] [= [value]]`
 
 Example:
-`
-goog.provide('example.MyClass');
+<pre><code>goog.provide('example.MyClass');
 ...
 private number _id = 0
-`
+</code></pre>
 
 Returns:
 <pre><code>
@@ -69,7 +66,7 @@ Returns:
  * @type {number}
  * @private
  */
-example.MyClass.Funnel.prototype._id = 0;
+example.MyClass.prototype._id = 0;
 </code></pre>
 
 Keywords
